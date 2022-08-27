@@ -13,8 +13,8 @@ Run npm install to install dependencies, and npm run dev to run the development 
 ## APIs routes
 
 API routes are:
-  -'/users' GET return all users
-  -'/users/:id' GET return user with ID
-  -'/users' POST create user
-  -'/users/:id' PUT update user with ID
-  -'/users/:id' DELETE delete user with ID
+  - '/users' GET return all users
+  - '/users/:id' GET return user with ID
+  - '/users' POST create user
+  - '/users/:id' PUT update user with ID
+  - '/users/:id' DELETE delete user with ID
