@@ -25,7 +25,7 @@ class App {
     }
 
     private database() {
-        mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/user')
+        mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/user').then(() => console.log("DB Started"))
     }
 }
 
