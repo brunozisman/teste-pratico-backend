@@ -1,7 +1,9 @@
 import express from 'express'
 import cors from 'cors'
+import 'dotenv/config';
 
 import routes from './routes'
+import mongoose from 'mongoose';
 
 class App {
     public server: express.Application
@@ -9,6 +11,7 @@ class App {
     public constructor() {
         this.server = express()
         this.middlewares()
+        this.database()
         this.routes()
     }
 
@@ -19,6 +22,10 @@ class App {
 
     private routes() {
         this.server.use(routes)
+    }
+
+    private database() {
+        mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/user')
     }
 }
 
